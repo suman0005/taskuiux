@@ -3,63 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nepal - Wikipedia</title>
     <style>
-        
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+
+.navbar {
+    background-color: #ccc;
+    padding: 10px 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.main-container {
+    display: flex;
+    margin: 20px;
+}
+
+
+.sidebar {
+    width: 20%;
+    padding: 10px;
+    background-color: #eee;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+
+main {
+    width: 50%;
+    padding: 20px;
+}
+
+
+.infobox {
+    width: 25%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 300px;
+}
+
+.infobox h2 {
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.infobox img {
+    max-width: 100%;
+    display: block;
+    margin: 10px 10px;
+}
+.flag{
+    width: 100px;
+    height: 150px;
+   
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.footers{
+    align-content: center;
+}
+
     </style>
 </head>
 <body>
-    <table>
-        <thead>
-        <tr>
-            <th>WIKIPEDIA</th>
-
-            <td>  <form action="search">
-                <label for="search">
-                    <input type="search" placeholder="search Wikipedia">
-                </label>
-                <td><button>search</button></td>
-                <td>Donate</td>
-            
-                <td>Create account</td>
-                <td>Login</td>
-        
-            </td>
-        </thead>
+    <header>
+        <div class="header-content">
+            <h1>Wikipedia</h1>
+            <input type="text" placeholder="Search Wikipedia">
+        </div>
+    </header>
+    <nav class="navbar">
+        <a href="#">Main page</a>
+        <a href="#">Talk</a>
+        <a href="#">Read</a>
+        <a href="#">View source</a>
+        <a href="#">View history</a>
+    </nav>
+    <div class="main-container">
        
-        </tr>
-      
-        </form>
-        <br>
-        <tr>
-            
-                <th>NEPAL</th>   
-            <td>254 language v</td>
-        </tr>
-        <tr><th>Content</th>
-        <td>Article &numsp; Talk</td>
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li>Etymology</li>
+                <li>History</li>
+                <li>Geography</li>
+                <li>Politics</li>
+                <li>Economy</li>
+                <li>Culture</li>
+            </ul>
+        </aside>
         
-    
-        <td>Read</td>
-        <td>view history</td>
-        <td>Tools</td>
-        <th>Appearance</th>
-    </tr>
-   
-    <tr>
-        <td rowspan="9">Etymology
-            history
-            Geographical
-            Political
-            Economy
-            Infrastructure
-            Culture
-            Demographics</td>
-        
-        
-   
-    </tr>
-    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum qui ab eius id veritatis aliquam quaerat quibusdam maiores sint libero? Cum exercitationem necessitatibus quasi? Nam labore dignissimos porro voluptate in!</td>
-</table>
+        <main>
+            <h1>Nepal</h1>
+            <p><strong>Nepal</strong>, officially the Federal Democratic Republic of Nepal...</p>
+            <p>It is a landlocked country in South Asia. It is mainly situated in the Himalayas, but also includes parts of the Indo-Gangetic Plain. It borders the Tibet Autonomous Region of China to the north, and India to the south, east, and west, while it is narrowly separated from Bangladesh by the Siliguri Corridor, and from Bhutan by the Indian state of Sikkim. Nepal has a diverse geography, including fertile plains, subalpine forested hills, and eight of the world's ten tallest mountains, including Mount Everest, the highest point on Earth. Kathmandu is the nation's capital and the largest city. Nepal is a multi-ethnic, multi-lingual, multi-religious and multi-cultural state, with Nepali as the official language.</p>
+        </main>
+       
+        <aside class="infobox">
+            <h2>Federal Democratic Republic of Nepal</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/1920px-Flag_of_Nepal.svg.png" alt="Flag of Nepal" class="flag">
+            <p><strong>Motto:</strong> Janani Janmabhoomishcha Swargadapi Gariyasi</p>
+        </aside>
+    </div>
+    <footer class="footers">
+        <p>From Wikipedia, the free encyclopedia</p>
+    </footer>
 </body>
 </html>
