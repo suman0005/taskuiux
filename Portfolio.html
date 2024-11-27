@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  
+ <style>
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 200px;
+  background: rgb(140, 76, 200);
+  color: #fff;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+}
+
+.sidebar .profile img {
+  border-radius: 50%;
+  width: 93px;
+  height: 90px;
+  margin-bottom: 10px;
+ margin-left: 30px;
+}
+.name{
+    font-size: 50px;
+}
+.sidebar .profile h1 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+  
+}
+
+.sidebar .profile p{
+  font-size: 15px;
+  color: #bbb;
+}
+
+.sidebar .social-icons a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+  
+}
+
+.sidebar .menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.sidebar .menu ul li {
+  text-align: center;
+}
+
+.sidebar .menu ul li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+.sidebar .menu ul li a:hover {
+  background: #333;
+}
+
+main {
+  flex: 1;
+  background: #f8f9fa;
+  overflow-y: auto;
+}
+
+.home-section {
+  display: flex;
+  
+  justify-content:start;
+  height: 100vh;
+  background: url('./IMG_0300.JPG') no-repeat center/cover;
+ 
+}
+
+.home-section h2 {
+  font-size: 50px;
+  color: rgb(125, 45, 200);
+  margin-left: 10px;
+  margin-top: 350px;
+}
+.menu{
+  font-size: 20px;
+}
+.home-section .intro p{
+    font-size:30px;
+    margin-left: 15px;
+   
+    color: rgb(125, 45, 200);;
+    
+}
+
+
+.home-section p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.about-section {
+  padding: 40px;
+}
+
+.about-section h2 {
+  margin-bottom: 20px;
+}
+
+.about-section .details {
+  display: flex;
+  align-items: center;
+}
+
+.about-section .details img {
+  width: 250px;
+  border-radius: 10px;
+  margin-right: 20px;
+ 
+}
+
+.about-section .details .info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section .details .info ul li {
+  margin: 5px 0;
+}
+
+.about-section .details .info ul li strong {
+  color: #000;
+}
+.resume-section{
+    margin: 40px;
+   
+}
+.resumedetails{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+.footer{
+   text-align: center;
+}
+.menu ul li{
+  padding-top: 15px;
+
+}
+.info ul li{
+  font-size: 20px;
+}
+.about-section h1{
+  font-size: 40px;
+}
+.about-section p{
+  font-size: 20px;
+}
+.resume-section h1{
+  font-size: 40px;
+
+}
+.resume-section p{
+  font-size: 20px;
+ 
+}
+.resume-education h1{
+  font-size: 40px;
+
+} 
+.resume-education p{
+  font-size: 20px;
+}
+.Hobbies h1{
+  font-size: 40px;
+}
+.skills ol{
+  font-size: 20px;
+}
+ </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="/profile.jpeg" alt="Profile Picture" class="firstprofile">
+        
+            <h1>Suman Shrestha</h1>
+        
+       
+       
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100076812961093"><i><i class="fa-brands fa-facebook"></i></i></a>
+          <a href="https://www.instagram.com/sumanstha278/"><i><i class="fa-brands fa-instagram"></i></i></a>
+          <a href="#"><i><i class="fa-brands fa-x-twitter"></i></i></a>
+          <a href="https://web.whatsapp.com/"><i><i class="fa-brands fa-whatsapp"></i></i></a>
+        </div>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#home"> <i><i class="fa-solid fa-house"></i></i> Home</a></li>
+          <li><a href="#about"><i><i class="fa-solid fa-user"></i></i> About</a></li>
+          <li><a href="#resume"><i><i class="fa-solid fa-file"></i></i> Resume</a></li>
+          <li><a href="#portfolio"><i><i class="fa-solid fa-image"></i></i> Portfolio</a></li>
+          <li><a href="#contact"><i><i class="fa-solid fa-address-book"></i></i> Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <section id="home" class="home-section">
+        <div class="intro">
+          <h2>Suman Shrestha</h2>
+          <p>I'm UI/UX Designer</p>
+        
+        </div>
+    
+      </section>
+      <section id="about" class="about-section">
+        <h1>About</h1>
+        <p>My name is Suman Shrestha. I'm student of Asian School of Management and Technology which is located at Gongabu,Kathmandu.</p>
+        <div class="details">
+          <img src="/profile.jpeg" alt="Profile Picture">
+          <div class="info">
+            <h2>UI/UX Designer </h2>
+            <ul>
+              <li><strong>Birthday:</strong> 05 May 2003</li>
+              <li><strong>Website:</strong>www.SumanDesigner.com.np</li>
+              <li><strong>Phone:</strong> 9810235159</li>
+              <li><strong>City:</strong> Tokha, Kathmandu</li>
+              <li><strong>Age:</strong> 21</li>
+              <li><strong>Degree:</strong> Bachelor</li>
+              <li><strong>Email:</strong>sthasuman278@gamil.com.com</li>
+              
+</ul>
+          </div>
+        </div>
+      </section>
+      <section id="resume" class="resume-section">
+        <h1>Resume</h1>
+        <p>Career Objective
+            Motivated and passionate UI/UX designer with a keen eye for detail and a strong interest in creating user-centered designs. Skilled in wireframing,
+            prototyping, and conducting user research to craft intuitive digital experiences. Eager to apply my knowledge and creativity to solve real-world
+            problems in a collaborative environment.</p>
+        <div class="resumedetails"> 
+            <div class="skills">    
+            <h2>Skills</h2>
+            
+            <ol>
+                <li>Design Tools 
+                <ol>Figma</ol>
+                <ol>Adobe XD</ol>
+                <ol>Adobe Photoshop</ol>
+                <ol>Illustrator</ol>
+            </li>
+            <li>Prototypin Tools
+                <ol>Figma</ol>
+                <ol>Protopie</ol>
+            </li>
+           
+            <li>Design Process
+                <ol>Wireframing</ol>
+                <ol>Prototyping</ol>
+                <ol>Information Architecture</ol>
+                <ol>User Flows</ol>
+            </li>
+            <li>Soft Skills
+                <ol>Problem-solving</ol>
+                <ol>Communication</ol>
+                <ol>Attention to Details</ol>
+                <ol></ol>
+            </li>
+        </ol>
+    </div>
+        <div class="resume-education">
+            <h2>Education</h2>
+            <p>Student of Bachelor</p>
+            <p>Asian School of Management and Technology</p>
+            <p>Gongabu, Kathmandu</p>
+        </div>
+        <div class="Hobbies">
+            <h2>Hobbies& Interest</h2>
+            <p>&bull;Staying updated on design trends through blogs and podcasts.</p>
+            <p>&bull;Participaating in hackathons and online design challenges.</p>
+            <p>&bull;Sketching and exploring new creative techniques.</p>
+        </div>
+        </div>
+        
+
+
+      </section>
+      <footer class="footer"> <p>© Copyright All Rights Reserved
+    </p>
+        <p>Designed by SumanDesigner</p></footer>
+  </div>
+    </main>
+    
+  
+  
+</body>
+</html>
