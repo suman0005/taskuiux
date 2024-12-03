@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         .container{
-            margin:1px;
+    margin: 0;
         }
 .box{
 background:url("https://images.pexels.com/photos/28578406/pexels-photo-28578406/free-photo-of-serene-landscape-with-lone-tree-under-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
@@ -35,9 +35,13 @@ margin-left: 30px;
 }
 .right-nav{
     display: flex;
-    margin-left: 55%;
+    margin-left: 40%;
     font-size: 20px;
     font-family:plusjakartasans,-apple-system, blinkmacsystemfont, Segoe UI, Roboto, Oxygen, Cantarell, Helvetica Neue, Ubuntu, sans-serif; 
+}
+.right-nav button:hover{
+    background-color: rgb(59, 59, 238);
+    
 }
 .Explore{
     padding-right: 20px;
@@ -69,7 +73,7 @@ margin-left: 30px;
 .p1{
     font-size:38px;
     font-family: plusjakartasans,-apple-system, blinkmacsystemfont, Segoe UI, Roboto, Oxygen, Cantarell, Helvetica Neue, Ubuntu, sans-serif;
-    color: red;
+    color:rgb(25, 119, 119);
 }
 .searchs{
     margin-left: 80px;
@@ -108,11 +112,18 @@ border-radius: 15px;
     
 }
 .Trendings{
-    font-size: 30px;
-    margin-left: 1200px;
+    font-size: 20px;
+    margin-left: 790px;
     padding: 10px;
     border-radius: 5px;
+    margin-top: 30px;
 }
+.Trendings:hover{
+    background-color: rgb(25, 119, 119);
+    cursor: pointer;
+
+}
+    
 .photo{
     height: 400px;
     width: 500px;
@@ -121,6 +132,7 @@ border-radius: 15px;
     height: 400px;
     width: 600px;
     margin-left: 70px;
+    cursor: pointer;
 }
 .photobox{
     display: flex;
@@ -130,8 +142,34 @@ border-radius: 15px;
     height: 700px;
     width: 400px;
     margin-left: 70px;
+    cursor: pointer;
+}
+.Freestock pre{
+    font-size: 30px;
+    border: 1px solid;
+    background-color: rgb(40, 182, 182);
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.img1{
+    margin-left: 30px;
+    cursor: pointer;
 }
 
+.Explore:hover{
+    color: rgb(23, 118, 118);
+    cursor: pointer;
+}
+.uploaded:hover{
+    color: rgb(23, 118, 118);
+    cursor: pointer;
+}
+.Licenced:hover{
+    color: rgb(23, 118, 118);
+    cursor: pointer;
+}
 
  </style>
 </head>
@@ -192,7 +230,7 @@ border-radius: 15px;
 </div>
 <div class="talakoo">
 <div class="Freestock">
-    <p class="stock">Free Stock Photo</p>
+    <pre>Free Stock Photo</pre>
 </div>
 
 <div class="trending">
@@ -203,9 +241,7 @@ border-radius: 15px;
     <div>
         <img src="/pexels-zandatsu-28143747.jpg" alt="" class="pic2">
     </div>
-    <div>
-        <img src="/pexels-itsbrunoagain-29288524.jpg" alt="" class="pic3">
-    </div>
+
 
 </div>
 </div>
