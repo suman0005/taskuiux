@@ -3,150 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Admin Dashboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
- <style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    display: flex;
-  }
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.nav-left {
-    display: flex;
-    align-items: center;
-}
-
-.menu-icon {
-    font-size: 20px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.welcome-text {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-}
-
-.nav-icon {
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.badge {
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    margin-left: -5px;
-    vertical-align: top;
-}
-
-.profile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.profile-pic {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.profile-name {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-}
-
-.profile-role {
-    font-size: 12px;
-    color: #777;
-}
-
-  
-  .sidebar {
-    width: 250px;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 20px;
-    height: 100vh;
-  }
-  
-  .sidebar h2 {
-    margin-bottom: 20px;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-  }
-  
-  .sidebar ul li {
-    margin-bottom: 15px;
-  }
-  
-  .main-content {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items:right;
-margin-top: 20px;
-  }
-  
-  .header h1 {
-    font-size: 24px;
-
-  }
-  
-  .filters button {
-    margin-left:10px;
-    padding: 10px;
-    justify-content:end;
-  }
-  
-  .content {
-    margin-top: 20px;
-    width: 400px;
-    display: flex;
-    
-    
-  
-  }
-  
-  .card {
+  <style>
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+    /* Left Panel */
+    .sidebar {
+      width: 250px;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+    .sidebar h2 {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    .sidebar ul {
+      list-style: none;
+      margin-top: 50px;
+    }
+    .sidebar ul li {
+      margin-bottom: 45px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .sidebar ul li:hover{
+        background-color: rgb(19, 7, 30);
+    }
+    .sidebar ul li i {
+      margin-right: 10px;
+    }
+    /* Scrollbar Styling */
+    .sidebar::-webkit-scrollbar {
+      width: 8px;
+    }
+    .sidebar::-webkit-scrollbar-thumb {
+      background-color: #34495e;
+      border-radius: 5px;
+    }
+    .sidebar::-webkit-scrollbar-track {
+      background-color: #2c3e50;
+    }
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .navbar .nav-left i {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .navbar .nav-right {
+      display: flex;
+      gap: 20px;
+    }
+    .navbar .nav-right i {
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .profile img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    /* Dashboard Cards */
+    .dashboard-cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 250px;
+    }
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+    .card-target{
     background-color: #8e44ad;
     color: white;
     padding: 20px;
@@ -175,9 +146,9 @@ margin-top: 20px;
     
   }
   .pp{
-    font-family: 
-    sans-serif;
+    font-family: sans-serif;
     font-size: 25px;
+    color: #e7e9e9;
    
    
   }
@@ -185,6 +156,7 @@ margin-top: 20px;
     padding-top: 20px;
     padding-top: 30px;
     width:200px ;
+    color: #000000;
     
   }
   
@@ -242,101 +214,80 @@ margin-top: 20px;
 .li{
   margin-top: 60px;
 }
-.left{
-  overflow:scroll;
-  text-wrap: nowrap;
-  
-}
- </style>
+  </style>
 </head>
 <body>
+  <!-- Sidebar -->
   <div class="sidebar">
-    <div class="a"> 
-      <div class="logo"><img src="./toggle-logo.png" alt=""> YNEX</div>
-    
-   </div> 
-
+    <h2>YNEX</h2>
     <ul>
-      <div class="maain">
-      <p class="main">MAIN</p>
-    </div>
-      <div class="left">
-
-      <li class="li"> <i><i class="fa-solid fa-house"></i></i>  Dashboard</li>
-      <li class="li"> <i><i class="fa-sharp-duotone fa-regular fa-page-caret-down"></i></i>Pages</li>
-      <li class="li"> <i><i class="fa-solid fa-list-check"></i></i> Task</li>
-      <li class="li"> i<i class="fa-solid fa-fingerprint"></i> Authentication</li>
-      <li class="li"> <i><i class="fa-solid fa-triangle-exclamation"></i></i> Error</li>
-      <li class="li"> <i><i class="fa-solid fa-box-archive"></i></i> UI Elements</li>
-     
+      <li><i class="fa fa-house"></i> Dashboard</li>
+      <li><i class="fa fa-file"></i> CRM</li>
+      <li><i class="fa fa-briefcase"></i> Ecommerce</li>
+      <li><i class="fa fa-chart-line"></i> Analytics</li>
+      <li><i class="fa fa-cogs"></i> Settings</li>
     </ul>
   </div>
-  </div>
 
+  <!-- Main Content -->
   <div class="main-content">
     <div class="navbar">
       <div class="nav-left">
-          <span class="menu-icon">☰</span>
-          
+        <i class="fa fa-bars"></i>
       </div>
       <div class="nav-right">
-          <i><i class="fa-solid fa-magnifying-glass"></i></i>
-          <i><i class="fa-solid fa-flag-usa"></i></i>
-          <i><i class="fa-solid fa-moon"></i></i>
-          <i><i class="fa-solid fa-bell"></i></i>
-          <i><i class="fa-regular fa-grid-2"></i></i>
-          <div class="profile">
-              <img src="./profile.jpeg" alt="Profile" class="profile-pic">
-              <span class="profile-name">Json Taylor</span>
-              <span class="profile-role">Web Designer</span>
-          </div>
-      </div>
-  </div>
-    <div class="header">
-      <h1>Welcome back, Json Taylor!</h1>
-      <div class="filters">
-        <button>Filters</button>
-        <button>Export</button>
+        <i class="fa fa-search"></i>
+        <i class="fa fa-bell"></i>
+        <i class="fa fa-user-circle"></i>
+        <div class="profile">
+          <img src="./profile.jpeg" alt="Profile Picture">
+          <span>Suman Shrestha</span>
+        </div>
       </div>
     </div>
+
+    <h1>Welcome back, SumAN Shrestha!</h1>
+    <p>Track your sales activity, leads, and deals here.</p>
+
     <div class="scontent">
-    <div class="content">
-      
-      <div class="card target">
-        <p class="pp">Your target is incomplete</p>
-        <p class="pp">48% completed</p>
-        <div class="circle">
-          <p class="ip">You have completed 48% of the given target, you can also check your status.</p>
-          <div class="fourty">
-            <p class="fourty-eight">48%</p>
+        <div class="content">
+          
+          <div class="card-target">
+            <p class="pp">Your target is incomplete</p>
+            <p class="pp">48% completed</p>
+            <div class="circle">
+              <p class="ip">You have completed 48% of the given target, you can also check your status.</p>
+              <div class="fourty">
+                <p class="fourty-eight">48%</p>
+              </div>
+            </div>
+          </div>
+          <div class="rbox">
+          <div class="stats">
+            <div class="stat">
+              <p>Total Customers</p>
+              <h2>102,890</h2>
+            </div>
+            <div class="stat">
+              <p>Total Revenue</p>
+              <h2>$56,562</h2>
+            </div>
+            </div>
+            <div class="sstat2">
+            <div class="stat2">
+              <p>Conversion Ratio</p>
+              <h2>12.08%</h2>
+            </div>
+            <div class="stat2">
+              <p>Total Deals</p>
+              <h2>2,543</h2>
+            </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="rbox">
-      <div class="stats">
-        <div class="stat">
-          <p>Total Customers</p>
-          <h2>102,890</h2>
-        </div>
-        <div class="stat">
-          <p>Total Revenue</p>
-          <h2>$56,562</h2>
-        </div>
-        </div>
-        <div class="sstat2">
-        <div class="stat2">
-          <p>Conversion Ratio</p>
-          <h2>12.08%</h2>
-        </div>
-        <div class="stat2">
-          <p>Total Deals</p>
-          <h2>2,543</h2>
-        </div>
-        </div>
-      </div>
+    
     </div>
-  </div>
-</div>
   </div>
 </body>
 </html>
