@@ -94,6 +94,7 @@ main {
   justify-content:start;
   height: 100vh;
   background: url('./IMG_0300.JPG') no-repeat center/cover;
+  
  
 }
 
@@ -266,12 +267,121 @@ font-size: 35px;
   height: 350px;
   
 }
-.port1{
-  height: 200px;
-  width: 300px;
-  border: 2px solid;
- 
+.contact h2{
+  color: solid black;
 }
+
+.slider-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Slider */
+    .slider {
+      display: flex;
+      gap: 15px;
+      animation: slide 17s infinite alternate ease-in-out;
+    }
+
+    .slide {
+      flex: 0 0 auto;
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 2.5s ease;
+    }
+
+    /* Hover Zoom Effect */
+    .slide img:hover {
+      transform: scale(1.1); /* Zooms image a little */
+    }
+
+    /* Title Styling */
+    .slide h1 {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      margin: 0;
+      font-size: 20px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    /* Keyframes for Automatic Slider Animation */
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-400px);
+      }
+      50% {
+        transform: translateX(-800px);
+      }
+      75% {
+        transform: translateX(-200px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+.containers {
+            display: flex;
+            justify-content:space-evenly;
+           
+            padding: 10px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(50, 47, 50, 0.1);
+            padding: 20px;
+            margin: 20px;
+            flex: 1 1 300px;
+            max-width: 350px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .highlight {
+            color: #6c63ff;
+            font-weight: bold;
+        }
+
+        .hobbies p {
+            margin: 10px 0;
+        }
 
  </style>
 </head>
@@ -279,7 +389,7 @@ font-size: 35px;
   <div class="container">
     <aside class="sidebar">
       <div class="profile">
-        <img src="/profile.jpeg" alt="Profile Picture" class="firstprofile">
+        <img src="profile.jpeg" alt="Profile Picture" class="firstprofile">
         
             <h1>Suman Shrestha</h1>
         
@@ -315,7 +425,7 @@ font-size: 35px;
         <h1>About</h1>
         <p>My name is Suman Shrestha. I'm student of Asian School of Management and Technology which is located at Gongabu,Kathmandu.</p>
         <div class="details">
-          <img src="/profile.jpeg" alt="Profile Picture">
+          <img src="profile.jpeg" alt="Profile Picture">
           <div class="info">
             <h2>UI/UX Designer </h2>
             <ul>
@@ -337,62 +447,67 @@ font-size: 35px;
             Motivated and passionate UI/UX designer with a keen eye for detail and a strong interest in creating user-centered designs. Skilled in wireframing,
             prototyping, and conducting user research to craft intuitive digital experiences. Eager to apply my knowledge and creativity to solve real-world
             problems in a collaborative environment.</p>
-        <div class="resumedetails"> 
-            <div class="skills">    
-            <h2>Skills</h2>
-            
-            <ol>
-                <li>Design Tools 
-                <ol>Figma</ol>
-                <ol>Adobe XD</ol>
-                <ol>Adobe Photoshop</ol>
-                <ol>Illustrator</ol>
-            </li>
-            <li>Prototypin Tools
-                <ol>Figma</ol>
-                <ol>Protopie</ol>
-            </li>
-           
-            <li>Design Process
-                <ol>Wireframing</ol>
-                <ol>Prototyping</ol>
-                <ol>Information Architecture</ol>
-                <ol>User Flows</ol>
-            </li>
-            <li>Soft Skills
-                <ol>Problem-solving</ol>
-                <ol>Communication</ol>
-                <ol>Attention to Details</ol>
-                <ol></ol>
-            </li>
-        </ol>
-    </div>
-        <div class="resume-education">
-            <h2>Education</h2>
-            <p>Student of Bachelor</p>
-            <p>Asian School of Management and Technology</p>
-            <p>Gongabu, Kathmandu</p>
-        </div>
-        <div class="Hobbies">
-            <h2>Hobbies& Interest</h2>
-            <p>&bull;Staying updated on design trends through blogs and podcasts.</p>
-            <p>&bull;Participaating in hackathons and online design challenges.</p>
-            <p>&bull;Sketching and exploring new creative techniques.</p>
-        </div>
-        </div>
+            <div class="containers">
+              <!-- Skills Card -->
+              <div class="card">
+                  <h2>Skills</h2>
+                  <ul>
+                      <li><span class="highlight">Design Tools:</span> Figma, Adobe XD, Photoshop, Illustrator</li>
+                      <li><span class="highlight">Prototyping Tools:</span> Figma, Protopie</li>
+                      <li><span class="highlight">Design Process:</span> Wireframing, Prototyping, Information Architecture, User Flows</li>
+                      <li><span class="highlight">Soft Skills:</span> Problem-solving, Communication, Attention to Details</li>
+                  </ul>
+              </div>
+      
+              <!-- Education Card -->
+              <div class="card">
+                  <h2>Education</h2>
+                  <p>Student of Bachelor</p>
+                  <p><span class="highlight">Asian School of Management and Technology</span></p>
+                  <p>Gongabu, Kathmandu</p>
+              </div>
+      
+              <!-- Hobbies & Interests Card -->
+              <div class="card hobbies">
+                  <h2>Hobbies & Interests</h2>
+                  <p>Staying updated on design trends through blogs and podcasts.</p>
+                  <p>Participating in hackathons and online design challenges.</p>
+                  <p>Sketching and exploring new creative techniques.</p>
+              </div>
+          </div>
+      
         
 <section class="portfolio" id="portfolio">
   
     <h1>Portfolio</h1>
     <p>These are the projects which i have done.</p>
-    <div class="portfolio-photo">
-      <div class="firstbox">  
-      
-      <a href="https://taskuiux.vercel.app/Pexels.html" >
-        <img src="/pexelskoss.png" alt="" class="port1">
-     </a>
-     
-    </div>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <a href="/Revolve/revolveblog.html">
+            <img src="Screenshot (1).png" alt="Revolve Blog">
+            <h1>Revolve Blog</h1>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="/Pexels/Pexels.html">
+            <img src="pexelskoss.png" alt="Pexels">
+            <h1>Pexels</h1>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="/">
+            <img src="Screenshot (2).png" alt="Restaurant">
+            <h1>Restaurant</h1>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="/NHNB/Nhnb.html">
+            <img src="Screenshot (5).png" alt="NHNB Clothing Brand">
+            <h1>NHNB Clothing Brand</h1>
+          </a>
+        </div>
+      </div>
     </div>
     <section class="Contact" id="Contact">
       <h2>Contact</h2>

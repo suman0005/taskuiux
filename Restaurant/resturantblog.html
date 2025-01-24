@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Restaurant</title>
+  <style>
+
+    /* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  color: #333;
+  background-color: rgb(212, 197, 176);
+}
+
+/* Navigation */
+.header {
+  background:  rgb(212, 197, 176);
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-right: 14em;
+  
+}
+
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.nav-links li a:hover{
+  color: rgb(245, 245, 4);
+}
+.reservebut{
+  margin-left: 22em;
+  background-color:#00473C;
+  border-radius: 20px;
+  padding: 16px;
+  color: yellow;
+  font-family: Poppins (woff2) sans-serif;
+  
+}
+.reservebut:hover{
+  background-color: greenyellow;
+  color:#00473C ;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  color: white;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 30px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+
+.logos{
+  height: 80px;
+}
+.contents{
+ color: whitesmoke;
+  margin-right: 60%;
+margin-top: 200px;
+font-size: 30px;
+
+}
+.menu-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 20px;
+      background-color:  rgb(212, 197, 176);
+      
+    }
+.menu-card {
+      flex: 0 0 auto;
+      width: 300px;
+      margin-right: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      background-color: #fff;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+
+    .menu-card:hover {
+      transform: scale(1.05);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-details {
+      padding: 15px;
+    }
+
+    .menu-details h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .menu-details p {
+      margin: 0 0 15px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .menu-details .price {
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
+   
+.viewbut{
+  height: 50px;
+  width: 80px;
+  margin-top: 39%;
+  margin-left: 90%;
+  border: 2px solid yellowgreen;
+  border-radius: 80%;
+  padding: 10px;
+  color: yellow;
+  background-color:#00473C;
+  font-family: Poppins (woff2) sans-serif;
+  
+}
+.viewbut:hover{
+color:#00473C;
+background-color:rgb(187, 234, 94);
+}
+.body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #333;
+      font-family: Arial, sans-serif;
+    }
+    .ourmenu{
+      margin-left: 30px;
+    
+    }
+    .ourmenu h1{
+      margin-top: 100px;
+    }
+    .containe {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.text-content {
+  max-width: 50%;
+
+}
+
+.text-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.text-content .subheading {
+  font-size: 1rem;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.text-content .description {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    margin: 10px 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p, 
+.footer-section ul {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ff6347;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 12px;
+}
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  max-width: 40%;
+}
+
+.image-gallery .image img {
+  width: 70%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+    .slidee {
+      position: relative;
+      width: 80%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .slidee img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease, transform 1s ease;
+      
+    }
+
+    .slidee img.active {
+      opacity: 1;
+      transform: scale(1.1); /* Slight zoom */
+    }
+
+    @keyframes slide {
+      0% { opacity: 1; transform: scale(1.1); }
+      25% { opacity: 0; transform: scale(1); }
+      50% { opacity: 0; transform: scale(1); }
+      75% { opacity: 0; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.1); }
+    }
+
+    .slidee img:nth-child(1) { animation: slide 12s infinite; animation-delay: 0s; }
+    .slidee img:nth-child(2) { animation: slide 12s infinite; animation-delay: 3s; }
+    .slidee img:nth-child(3) { animation: slide 12s infinite; animation-delay: 6s; }
+    .slidee img:nth-child(4) { animation: slide 12s infinite; animation-delay: 9s; }
+
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">
+        <img src="https://grandrestaurantv6-7.b-cdn.net/clean/wp-content/uploads/sites/2/2022/09/logo.png" class="logos" alt="">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#slider">Home</a></li>
+        <li><a href="#ourmenu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <button class="reservebut">Make a Reservation</button>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Slider -->
+  <section class="slider" id="slider">
+    <div class="slides">
+      <div class="slide active" style="background-image: url('https://delhibrasserie.com/wp-content/uploads/2023/11/db-1080x675.webp');">
+        <div class="content" id="home">
+          <h1>Welcome to Grand Restaurant</h1>
+          <p>Experience the finest cuisines crafted with passion.</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://th.bing.com/th/id/OIP.BCdZZj29mUl8APfHp9VdFwHaEK?rs=1&pid=ImgDetMain');">
+        <div class="contents">
+          <h1>Delicious Dishes</h1>
+          <p>Fresh ingredients, exquisite taste.</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://www.pathsocial.com/wp-content/uploads/2022/04/ig-food-accoun-banner.png');">
+        <div class="contents">
+          <h1>Reserve Your Table</h1>
+          <p>Book online and dine with us.</p>
+        </div>
+      </div>
+    </div>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+  </section>
+
+  <!-- Menu Section -->
+   <div class="ourmenu"  id="ourmenu"><h1>Our Menu</h1></div>
+    
+  <div class="menu-container">
+    <button class="viewbut">View All</button>
+    <div class="menu-card">
+      <img src="https://images.pexels.com/photos/1860208/pexels-photo-1860208.jpeg?cs=srgb&dl=cooked-food-1860208.jpg&fm=jpg" alt="Guacamole Greens">
+      <div class="menu-details">
+        <h3>Guacamole Greens</h3>
+        <p>Roasted chicken, avocado, tomatoes, red onions, shredded cabbage</p>
+        <div class="price">
+          <span>Small $8.0</span>
+          <span>Large $12.0</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="https://th.bing.com/th/id/OIP.4G0KHCK-SR9QQti5FbGfmwAAAA?rs=1&pid=ImgDetMain" alt="Harvest Bowl">
+      <div class="menu-details">
+        <h3>Burger</h3>
+        <p>Mexican bread,protein,tomato,fresh vegitables.</p>
+        <div class="price">
+          <span>Small $7.0</span>
+          <span>Large $10.0</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="https://d368ufu7xgcs86.cloudfront.net/11023-1553166761.jpg" alt="Summer Asian Slaw">
+      <div class="menu-details">
+        <h3>MOMO</h3>
+        <p>Pickled carrots + celery, tomatoes, cilantro, blue cheese, za'atar</p>
+        <div class="price">
+          <span>Small $10.0</span>
+          <span>Large $14.0</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="https://th.bing.com/th/id/OIP.G57g8ZrsPqqRsReeYh8pQwHaEo?w=1024&h=640&rs=1&pid=ImgDetMain" alt="Shredded Brussels Sprout">
+      <div class="menu-details">
+        <h3>Pizza</h3>
+        <p>Raw beets, cucumbers, basil, sunflower seeds, warm wild rice, shredded kale</p>
+        <div class="price">
+          <span>Small $9.0</span>
+          <span>Large $13.0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="containe">
+    <div class="text-content">
+      <h1>We Created the Best Dining Experience for You & Your Family</h1>
+      <p class="subheading">SIMPLY BUT DELICIOUS EXPERIENCE</p>
+      <p class="description">
+      A chef is a professional cook and tradesperson who is proficient in all aspects of food preparation, often focusing on a particular cuisine. The word "chef" is derived from the term chef de cuisine (French pronunciation: [ʃɛf də kɥizin]), the director or head of a kitchen. Chefs can receive formal training from an institution, as well as by apprenticing with an experienced chef.   Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean
+      lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh
+      ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis
+      dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget
+      risus varius blandit sit amet non magna.
+      </p>
+    </div>
+ 
+    <div class="image-gallery">
+      <div class="image">
+        <img src="https://thumbs.dreamstime.com/b/smiling-male-chef-cooked-food-kitchen-portrait-standing-39216655.jpg" alt="Chefs team">
+      </div>
+      <div class="image">
+        <img src="https://thumbs.dreamstime.com/b/man-cooking-kitchen-portrait-69345896.jpg" alt="Salad bowl">
+      </div>
+      <div class="image">
+        <img src="https://th.bing.com/th/id/OIP.jmBBWrNxL-NEd1Z6E2FciwHaHa?w=640&h=640&rs=1&pid=ImgDetMain" alt="Delicious dish">
+      </div>
+      <div class="image">
+        <img src="https://nationaltoday.com/wp-content/uploads/2021/07/shutterstock_1518533924-min.jpg" alt="Chef cooking">
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>Grand Restaurant , Tokha -03</p>
+            <p>Email: Grandrestaurant278@restaurant.com</p>
+            <p>Phone: +9779810235159</p>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Opening Hours</h4>
+            <p>Mon - Fri: 9:00 AM - 10:00 PM</p>
+            <p>Sat - Sun: 10:00 AM - 11:00 PM</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Grand Restaurant . All Rights Reserved.</p>
+    </div>
+</footer>
+
+  <script>
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  currentSlide = (index + totalSlides) % totalSlides;
+  document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+// Auto Slide
+setInterval(() => {
+  nextSlide();
+}, 5000);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .background{
+            background-image: url(./Snapinsta.app_466329295_505742859157889_8810903524923366530_n_1080.jpg);
+            background-size: 100%;
+            
+        }
+
+.img{
+    width: 50%;
+}
+.flex{
+    background-color: black;
+}
+.one{
+    width: 20%;
+
+}
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #e8cdcd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header .filters {
+    margin-top: 10px;
+}
+
+.filters button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.filters button:hover {
+    background-color: #f0f0f0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: black;
+}
+
+.product-card {
+    background-color: #faf7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Zoom in on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.product-card .old-price {
+    text-decoration: line-through;
+    color: #999;
+}
+.but{
+  border: 2px solid black;
+  padding: 10px;
+  margin: 20px;
+  width: 90px;
+  border-radius: 5px;
+}
+.but:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(83, 180, 14);
+}
+.about-us {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 50px 100px;
+    background: linear-gradient(135deg, #f3e7e9, #e3eef7);
+}
+
+.about-us .content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-us .content h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-us .content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-us .content .learn-more {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.about-us .content .learn-more:hover {
+    background-color: #0056b3;
+}
+
+.about-us .imagee {
+    flex: 1;
+    text-align: center;
+}
+
+.about-us .image img {
+    max-width: 80%;
+    height: auto;
+}
+/* Footer Styles */
+.footer {
+    background-color: #382f2f; /* Black background for elegance */
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffcc00; /* Accent color for headings */
+}
+
+.footer p, .footer ul {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer-newsletter form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.footer-newsletter input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.social-media {
+    display: flex;
+    gap: 30px;
+    font-size: larger;
+}
+
+.social-media a:hover img {
+    filter: invert(60%);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+<nav class="bg-black">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          
+          <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex shrink-0 items-center">
+          <img class="h-11 rounded-lg" src="logo.png" alt="Your Company">
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            
+            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">T-shirt</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About Us</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+          <span class="absolute -inset-1.5"></span>
+          <span class="sr-only">View notifications</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+          </svg>
+        </button>
+
+        <!-- Profile dropdown -->
+        <div class="relative ml-3">
+          <div>
+            <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+              <span class="absolute -inset-1.5"></span>
+              <span class="sr-only">Open user menu</span>
+              <img class="size-8 rounded-full" src="logo.png" alt="">
+            </button>
+          </div>
+
+          <!--
+            Dropdown menu, show/hide based on menu state.
+
+            Entering: "transition ease-out duration-100"
+              From: "transform opacity-0 scale-95"
+              To: "transform opacity-100 scale-100"
+            Leaving: "transition ease-in duration-75"
+              From: "transform opacity-100 scale-100"
+              To: "transform opacity-0 scale-95"
+          -->
+          <!-- <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1"> -->
+            <!-- Active: "bg-gray-100 outline-none", Not Active: "" -->
+            <!-- <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-600 hover:text-current" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a> -->
+            <!-- <a href="#" class="block px-4 py-2 text-sm text-gray-700  hover:bg-slate-600 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a> -->
+            <!-- <a href="#" class="block px-4 py-2 text-sm text-gray-700  hover:bg-slate-600 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a> -->
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="sm:hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">T-shirt</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About Us</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Us</a>
+    </div>
+  </div>
+</nav>
+<div class="flex">
+    <div class="img">
+        <img src="logo.png" alt="No image found">
+    </div>
+    <div class="background">
+       <p class="text-white text-4xl ml-30 mt-20">N Humble New Beginning</p> 
+    </div>
+    
+</div>
+
+
+  <div class="header" id="header">
+        <h1>Tshirt</h1>
+        <div class="filters">
+            <button>Price (Rs)</button>
+            <button>Shop</button>
+        </div>
+    </div>
+    <div class="product-grid">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+            <img src="/NHNB/brown.jpg" alt="Product 1">
+            <h3>Brown T-Shirts Design edition</h3>
+            <p>⭐⭐⭐⭐⭐ (6.6k)</p>
+            <p><strong>Rs 999</strong> <span class="old-price">Rs 1800</span> (50% off)</p>
+            <button class="but">Buy</button>
+            
+        </div>
+        <!-- Product Card 2 -->
+        <div class="product-card">
+            <img src="./dark blue.jpg" alt="Product 2">
+            <h3>Dark Blue Edition</h3>
+            <p>⭐⭐⭐⭐⭐ (2.4k)</p>
+            <p><strong>Rs 999</strong> <span class="old-price">Rs 1200</span> (25% off)</p>
+            <button class="but">Buy</button>
+         
+        </div>
+        <!-- Product Card 3 -->
+        <div class="product-card">
+            <img src="./light blue.jpg" alt="Product 3">
+            <h3>light Blue Edition</h3>
+            <p>⭐⭐⭐⭐ (543)</p>
+            <p><strong>Rs 999</strong></p>
+            <button class="but">Buy</button>
+            
+        </div>
+    </div>
+    <section class="about-us">
+      <div class="content">
+          <h1>ABOUT US</h1>
+          <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, ex. Magni magnam soluta officiis libero eveniet dolores, totam saepe voluptatum commodi. Fugiat a ullam nobis quis minima ea numquam, pariatur asperiores dolorum. Tenetur praesentium excepturi recusandae cumque, pariatur provident alias laboriosam beatae sequi reiciendis veritatis deleniti laborum nihil? Praesentium, natus!</p>
+          <button class="learn-more">Learn More</button>
+      </div>
+      <div class="imagee">
+          <img src="./background.jpg" alt="Team Illustration">
+      </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>
+                At NHNBClothing, we bring you the latest trends and timeless pieces that define your unique style.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: NHNBClothing@gmail.com</p>
+            <p>Phone: +9779810235154</p>
+            <p>Address: Bhutkhel,Tokha -03 </p>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+            <h3>Stay Connected</h3>
+            <form action="#">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div class="social-media">
+              <a href="https://www.facebook.com/profile.php?id=100076812961093"><i><i class="fa-brands fa-facebook"></i></i></a>
+          <a href="https://www.instagram.com/sumanstha278/"><i><i class="fa-brands fa-instagram"></i></i></a>
+          <a href="#"><i><i class="fa-brands fa-x-twitter"></i></i></a>
+          <a href="https://web.whatsapp.com/"><i><i class="fa-brands fa-whatsapp"></i></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 NHNB Clothing. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
