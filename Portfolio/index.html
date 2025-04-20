@@ -111,7 +111,7 @@ main {
     font-size:20px;
     margin-left: 15px;
    
-    color: rgb(125, 45, 200);;
+    color: rgb(125, 45, 200);
     
 }
 
@@ -200,77 +200,69 @@ main {
 .skills ol{
   font-size: 19px;
 }
-.addressbox{
-  border: 1px solid darkslategrey;
-  border-radius: 10px;
-  width: 70%;
- margin-left: 10px;
- padding: 10px;
-}
-.maps{
-  width:100%;
- 
-}
-.strong{
-  font-size: 20px;
-}
-.addressbox p{
-  font-size: 12px;
-  padding-top: 0px;
-  padding-left: 5px;
-}
-.addressbox i:hover{
-  color: blueviolet;
-  cursor: pointer;
-}
-.big-box{
-  display: flex;
-}
-.form{
- margin-left:100px;
- font-size: 20px;
+.contact {
+    text-align:start;
+    padding: 40px;
+    background: #f9f9f9;
+  }
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .info-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .info-box i {
+    font-size: 20px;
+    color:  rgb(125, 45, 200);
+  }
+  .info-box .strong{
+    font-size: large;
+  }
+  .map {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: 0;
+  }
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .contact-form button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .contact-form button:hover {
+    background: #0056b3;
+  }
 
-}
-.form label{
-  padding-top: 10px;
-  font-size: 20px;
-}
-.form input{
-  font-size: 30px;
-}
-.form textarea{
-font-size: 35px;
-}
-.form button{
- align-content: center;
- margin-top: 100px;
- padding: 5px;
- font-size: 20px;
- margin-left: 150px;
-}
-.form button:hover{
-  color: blue;
-}
-.CallUs{
-  padding-top: 25px;
-  padding-left: 20px;
-}
-.EmailUs{
-  padding-top: 25px;
-  padding-left: 20px;
-}
-.Address{
-  padding-top: 25px;
-  padding-left: 20px;
-}
-.firstbox{
-  border: 2px solid;
-  height: 350px;
-  
-}
-.contact h2{
-  color: solid black;
-}
 
 .slider-container {
       width: 100%;
@@ -409,7 +401,7 @@ font-size: 35px;
           <li><a href="#about"><i><i class="fa-solid fa-user"></i></i> About</a></li>
           <li><a href="#resume"><i><i class="fa-solid fa-file"></i></i> Resume</a></li>
           <li><a href="#portfolio"><i><i class="fa-solid fa-image"></i></i> Portfolio</a></li>
-          <li><a href="#Contact"><i><i class="fa-solid fa-address-book"></i></i> Contact</a></li>
+          <li><a href="#contact"><i><i class="fa-solid fa-address-book"></i></i> Contact</a></li>
         </ul>
       </nav>
     </aside>
@@ -485,83 +477,79 @@ font-size: 35px;
     <div class="slider-container">
       <div class="slider">
         <div class="slide">
-          <a href="/Revolve/revolveblog.html">
+          <a href="./Revolve/revolveblog.html">
             <img src="Screenshot (1).png" alt="Revolve Blog">
             <h1>Revolve Blog</h1>
           </a>
         </div>
         <div class="slide">
-          <a href="/Pexels/Pexels.html">
+          <a href="./Pexels/Pexels.html">
             <img src="pexelskoss.png" alt="Pexels">
             <h1>Pexels</h1>
           </a>
         </div>
         <div class="slide">
-          <a href="/Restaurant/resturantblog.html">
+          <a href="./Restaurant/resturantblog.html">
             <img src="Screenshot (66).png" alt="Restaurant">
             <h1>Restaurant</h1>
           </a>
         </div>
         <div class="slide">
-          <a href="/NHNB/Nhnb.html">
+          <a href="./NHNB/index.html">
             <img src="Screenshot (5).png" alt="NHNB Clothing Brand">
             <h1>NHNB Clothing Brand</h1>
           </a>
         </div>
         <div class="slide">
-          <a href="/">
+          <a href="./restorant.html">
             <img src="/Portfolio/Screenshot (2).png" alt="Resturant">
             <h1>Restorant</h1>
           </a>
         </div>
       </div>
     </div>
-    <section class="Contact" id="Contact">
-      <h2>Contact</h2>
-      <p>You can be on touch with me.</p>
-      <div class="big-box">
-        <div class="addressbox">
-          <div class="Address">
-            <i><i class="fa-solid fa-location-dot"></i><strong class="strong"> Location</strong></i>
-            <p>Tokha,Kathmandu</p>
-            
+    <section class="contact" id="contact">
+      <h1>Contact</h1>
+      <p>Stay in touch with me.</p>
+      <div class="contact-container">
+        <!-- Left Section: Address & Map -->
+        <div class="contact-info">
+          <div class="info-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <strong>Location</strong>
+            <p>Tokha, Kathmandu</p>
           </div>
-          <div class="CallUs">
-            <i><i class="fa-solid fa-phone"></i><strong class="strong"> Call Us</strong></i>
+          <div class="info-box">
+            <i class="fa-solid fa-phone"></i>
+            <strong>Call Us</strong>
             <p>+9779810235159</p>
-            
           </div>
-          <div class="EmailUs">
-            <i><i class="fa-solid fa-envelope"></i><strong class="strong"> Email Us</strong></i>
+          <div class="info-box">
+            <i class="fa-solid fa-envelope"></i>
+            <strong>Email Us</strong>
             <p>sthasuman278@gmail.com</p>
-            
           </div>
-          <div class="map">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56482.13537187244!2d85.28730581444142!3d27.774861642476687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1ec21a0ec5f1%3A0x21faccfa9ccf1956!2z4KSf4KWL4KSW4KS-!5e0!3m2!1sne!2snp!4v1731491332238!5m2!1sne!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0" class="maps"></iframe>
-            
-          </div>
-          
-          
-
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56482.13537187244!2d85.28730581444142!3d27.774861642476687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1ec21a0ec5f1%3A0x21faccfa9ccf1956!2z4KSf4KWL4KSW4KS-!5e0!3m2!1sne!2snp!4v1731491332238!5m2!1sne!2snp" allowfullscreen loading="lazy"></iframe>
         </div>
-        <div class="form">
+        <!-- Right Section: Contact Form -->
+        <div class="contact-form">
           <form>
-            <label >Your Name</label><br>
-            <input type="text"><br><br><br>
-            <label>Email</label><br>
-            <input type="email"><br><br><br>
-            <label> Phone Number</label><br>
-            <input type="number"><br><br><br>
-            <label>Subject</label><br>
-            <input type="text"><br><br><br>
-            <label for="">Message</label><br>
-           <textarea name="Message" ></textarea>
-           <button>Submit</button>
+            <label>Your Name</label>
+            <input type="text" required>
+            <label>Email</label>
+            <input type="email" required>
+            <label>Phone Number</label>
+            <input type="number" required>
+            <label>Subject</label>
+            <input type="text" required>
+            <label>Message</label>
+            <textarea required></textarea>
+            <button type="submit">Submit</button>
           </form>
-
         </div>
       </div>
     </section>
+    
 
   
 

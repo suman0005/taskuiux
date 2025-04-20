@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restoran</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+ <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(226, 229, 174);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  background-color: #333;
+  color: white;
+  position: sticky;
+  
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.btn {
+  background-color: #f9a825;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  background: url('https://img.freepik.com/premium-photo/food-table-top-view-free-space-your-text_187166-25767.jpg') no-repeat center center/cover;
+  color: white;
+  height:390px;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-right: 60px;
+    animation-name:rotate;
+    position:relative;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-links a:hover{
+    color: yellow;
+}
+.chefs-section {
+            padding: 50px 20px;
+            background-color: rgb(226, 229, 174);
+        }
+        .chefs-section h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .chefs-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .chef-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+        }
+        .chef-card img {
+            width: 155px;
+            height: 155px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .chef-card h3 {
+            font-size: 1.3em;
+            color: #ff9900;
+            margin-bottom: 5px;
+        }
+        .chef-card p {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: #ff9900;
+            font-size: 1.5em;
+        }
+
+        .containerr {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      width: 80%;
+      max-width: 1000px;
+      justify-content: center;
+      margin-left:130px;
+      margin-top: 100px;
+      
+    }
+
+    .card {
+      position: relative;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+      transition: color 0.3s ease;
+      z-index: 1;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card:hover h3 {
+      color: #ffcc00; /* Change text color on hover */
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay on top of the image */
+      transition: background 0.3s ease;
+      z-index: 1;
+    }
+
+    .card:hover .overlay {
+      background: rgba(0, 0, 0, 0.3); /* Lighten overlay on hover */
+    }
+.specialities{
+  text-align: center;
+  margin-top: 100px;
+}
+footer {
+        background: #d6b636;
+        color: #fff;
+        padding: 40px 0;
+        text-align: center;
+    }
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .footer-section {
+        flex: 1;
+        min-width: 250px;
+        margin: 10px;
+    }
+    .footer-section h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+    .social a {
+        color: #ffffff;
+        margin: 0 10px;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+    .social a:hover {
+        color:#d4d2c9;
+    }
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    .best-selling {
+        text-align: center;
+        padding: 50px 20px;
+        background:  rgb(226, 229, 174);
+    }
+    .best-selling.h2{
+      justify-content:flex-start
+    }
+    .cart-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .cart-item {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 220px;
+    }
+    .cart-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .cart-item h3 {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    .price {
+        font-size: 16px;
+        color: #e67e22;
+        font-weight: bold;
+    }
+ </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">🍴Tokha Resturant</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Cheifs</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <a href="#" class="btn">Book a Table</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Enjoy Our Delicious Meal</h1>
+      <p>Taste feels like home. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita placeat, dolorem totam dolores facilis nisi deserunt asperiores? Soluta, sunt dolores?</p>
+      <a href="#" class="btn">Book a Table</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://tomemoffatt.com/wp-content/uploads/2019/01/food-circle.png" >
+    </div>
+  </section>
+  <div class="specialities">
+    <h1>Our Specialities</h1>
+  </div>
+  <div class="containerr">
+    <div class="card">
+      <div class="overlay"></div>
+      <img src="https://cdn.stunningnepal.com/wp-content/uploads/2019/11/Newari-Khaja-Set.jpg" alt="Indian Specialties">
+      <h3>Indian Specialties</h3>
+    </div>
+    <div class="card">
+      <div class="overlay"></div>
+      <img src="https://th.bing.com/th/id/R.28316494c75a6045d3df671ea77aaa8e?rik=AX3HdApREKZGng&pid=ImgRaw&r=0" alt="Continental Specialties">
+      <h3>Continental Specialties</h3>
+    </div>
+    <div class="card">
+      <div class="overlay"></div>
+      <img src="https://th.bing.com/th/id/R.03e279f8a4b63d15f7e3312ceb109868?rik=5J7Sc297xikbUA&pid=ImgRaw&r=0" alt="Third Eye Thali">
+      <h3>Third Eye Thali</h3>
+    </div>
+    <div class="card">
+      <div class="overlay"></div>
+      <img src="https://th.bing.com/th/id/OIP._NBYF-3g_OAUAd2JpHuPpwHaE8?rs=1&pid=ImgDetMain" alt="Snacks & Desserts">
+      <h3>Snacks & Desserts</h3>
+    </div>
+  </div>
+  <section class="chefs-section">
+    <h1>Our Chefs</h1>
+    <div class="chefs-container">
+        <!-- Chef 1 -->
+        <div class="chef-card">
+            <img src="https://th.bing.com/th/id/R.7fb29441ef4d8584e720213c7ea0a02f?rik=JSFEXdCdq2hiYQ&riu=http%3a%2f%2fpngimg.com%2fuploads%2fchef%2fchef_PNG73.png&ehk=wyCM8%2f51SkNMXMdA%2bi%2bZ1pfyJ4536UimDYXVVrshyKE%3d&risl=&pid=ImgRaw&r=0">
+            <h3>Orni Stark</h3>
+            <p>Founder</p>
+            <div class="social-icons">
+                <a href="#"><i><i class="fa-brands fa-facebook"></i></i></a>
+                <a href="#"><i><i class="fa-brands fa-instagram"></i></i></a>
+                <a href="#"><i><i class="fa-brands fa-twitter"></i></i></a>
+                <a href="#"><i><i class="fa-brands fa-google"></i></i></a>
+            </div>
+        </div>
+        <!-- Chef 2 -->
+        <div class="chef-card">
+            <img src="https://img.freepik.com/premium-photo/chef-giving-thumbs-up-isolated-white-background_1000823-51776.jpg" alt="Biltam Robinson">
+            <h3>Biltam Robinson</h3>
+            <p>Head Chef</p>
+            <div class="social-icons">
+              <a href="#"><i><i class="fa-brands fa-facebook"></i></i></a>
+              <a href="#"><i><i class="fa-brands fa-instagram"></i></i></a>
+              <a href="#"><i><i class="fa-brands fa-twitter"></i></i></a>
+              <a href="#"><i><i class="fa-brands fa-google"></i></i></a>
+            </div>
+        </div>
+        <!-- Chef 3 -->
+        <div class="chef-card">
+            <img src="https://img.freepik.com/premium-photo/portrait-professional-male-chef-business-pose_942559-16120.jpg" alt="Rabina Ives">
+            <h3>Rabina Ives</h3>
+            <p>Pastry Chef</p>
+            <div class="social-icons">
+              <a href="#"><i><i class="fa-brands fa-facebook"></i></i></a>
+              <a href="#"><i><i class="fa-brands fa-instagram"></i></i></a>
+              <a href="#"><i><i class="fa-brands fa-twitter"></i></i></a>
+              <a href="#"><i><i class="fa-brands fa-google"></i></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="best-selling">
+  <h2>Best Selling Dishes</h2>
+  <div class="cart-container">
+      <div class="cart-item">
+          <img src="https://bing.com/th?id=OSK.30dff3b5df447d8b02fc1b674346b6b5" alt="Chicken Fried Rice">
+          <h3>Chicken Fried Rice</h3>
+          <p class="price">Rs.300</p>
+      </div>
+      <div class="cart-item">
+          <img src="https://bing.com/th?id=OSK.14276b87a16e21040da7994162ca68df" alt="Chinese Pasta">
+          <h3>Chinese Pasta</h3>
+          <p class="price">Rs.320</p>
+      </div>
+      <div class="cart-item">
+          <img src="https://th.bing.com/th/id/OIP.DCo9WiTpIrkbrdycCO2NFAHaFj?w=1788&h=1341&rs=1&pid=ImgDetMain " alt="Chicken Pizza">
+          <h3>Chicken Pizza</h3>
+          <p class="price">Rs.750</p>
+      </div>
+      <div class="cart-item">
+          <img src="https://th.bing.com/th/id/OIP.8-Uziimm7vcOBkfZJXWuzAHaHa?rs=1&pid=ImgDetMain" alt="Chicken Noodles">    
+          <h3>Chicken Noodles</h3>
+          <p class="price">Rs.280</p>
+      </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-container">
+      <div class="footer-section">
+          <h2>About Us</h2>
+          <p>Experience the finest cuisine with a touch of elegance. Visit us for an unforgettable dining experience.</p>
+      </div>
+      <div class="footer-section">
+          <h2>Contact</h2>
+          <p><strong>Address:</strong> Tokha-03, Kathmandu</p>
+          <p><strong>Phone:</strong> 9810235159</p>
+          <p><strong>Email:</strong> Tokharestaurant.com</p>
+      </div>
+      <div class="footer-section">
+          <h2>Opening Hours</h2>
+          <p>Monday - Friday: 10AM - 10PM</p>
+          <p>Saturday - Sunday: 12PM - 11PM</p>
+      </div>
+      <div class="footer-section social">
+          <h2>Follow Us</h2>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2025 Tokha Restaurant. All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
